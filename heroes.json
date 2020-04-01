@@ -1,1 +1,354 @@
-[{"Name":"Abathur","Role":"Support"},{"Name":"Alarak","Role":"Melee Assassin"},{"Name":"Alexstrasza","Role":"Healer"},{"Name":"Ana","Role":"Healer"},{"Name":"Anduin","Role":"Healer"},{"Name":"Anubarak","Role":"Tank"},{"Name":"Artanis","Role":"Bruiser"},{"Name":"Arthas","Role":"Tank"},{"Name":"Auriel","Role":"Healer"},{"Name":"Azmodan","Role":"Ranged Assassin"},{"Name":"Firebat","Role":"Tank"},{"Name":"FaerieDragon","Role":"Healer"},{"Name":"Amazon","Role":"Ranged Assassin"},{"Name":"Chen","Role":"Bruiser"},{"Name":"Cho","Role":"Tank"},{"Name":"Chromie","Role":"Ranged Assassin"},{"Name":"Deathwing","Role":"Bruiser"},{"Name":"Deckard","Role":"Healer"},{"Name":"Dehaka","Role":"Bruiser"},{"Name":"Diablo","Role":"Tank"},{"Name":"DVa","Role":"Bruiser"},{"Name":"L90ETC","Role":"Tank"},{"Name":"Falstad","Role":"Ranged Assassin"},{"Name":"Fenix","Role":"Ranged Assassin"},{"Name":"Gall","Role":"Ranged Assassin"},{"Name":"Garrosh","Role":"Tank"},{"Name":"Tinker","Role":"Melee Assassin"},{"Name":"Genji","Role":"Ranged Assassin"},{"Name":"Greymane","Role":"Ranged Assassin"},{"Name":"Guldan","Role":"Ranged Assassin"},{"Name":"Hanzo","Role":"Ranged Assassin"},{"Name":"Illidan","Role":"Melee Assassin"},{"Name":"Imperius","Role":"Bruiser"},{"Name":"Jaina","Role":"Ranged Assassin"},{"Name":"Crusader","Role":"Tank"},{"Name":"Junkrat","Role":"Ranged Assassin"},{"Name":"Kaelthas","Role":"Ranged Assassin"},{"Name":"KelThuzad","Role":"Ranged Assassin"},{"Name":"Kerrigan","Role":"Melee Assassin"},{"Name":"Monk","Role":"Healer"},{"Name":"Leoric","Role":"Bruiser"},{"Name":"LiLi","Role":"Healer"},{"Name":"Wizard","Role":"Ranged Assassin"},{"Name":"LostVikings","Role":"Support"},{"Name":"Medic","Role":"Healer"},{"Name":"Lucio","Role":"Healer"},{"Name":"Dryad","Role":"Ranged Assassin"},{"Name":"Maiev","Role":"Melee Assassin"},{"Name":"Malfurion","Role":"Healer"},{"Name":"MalGanis","Role":"Tank"},{"Name":"Malthael","Role":"Bruiser"},{"Name":"Medivh","Role":"Support"},{"Name":"Mephisto","Role":"Ranged Assassin"},{"Name":"Muradin","Role":"Tank"},{"Name":"Murky","Role":"Melee Assassin"},{"Name":"WitchDoctor","Role":"Ranged Assassin"},{"Name":"Nova","Role":"Ranged Assassin"},{"Name":"Orphea","Role":"Ranged Assassin"},{"Name":"Probius","Role":"Ranged Assassin"},{"Name":"NexusHunter","Role":"Melee Assassin"},{"Name":"Ragnaros","Role":"Bruiser"},{"Name":"Raynor","Role":"Ranged Assassin"},{"Name":"Rehgar","Role":"Healer"},{"Name":"Rexxar","Role":"Bruiser"},{"Name":"Samuro","Role":"Melee Assassin"},{"Name":"SgtHammer","Role":"Ranged Assassin"},{"Name":"Barbarian","Role":"Bruiser"},{"Name":"Stitches","Role":"Tank"},{"Name":"Stukov","Role":"Healer"},{"Name":"Sylvanas","Role":"Ranged Assassin"},{"Name":"Tassadar","Role":"Support"},{"Name":"Butcher","Role":"Melee Assassin"},{"Name":"Thrall","Role":"Bruiser"},{"Name":"Tracer","Role":"Ranged Assassin"},{"Name":"Tychus","Role":"Ranged Assassin"},{"Name":"Tyrael","Role":"Tank"},{"Name":"Tyrande","Role":"Healer"},{"Name":"Uther","Role":"Healer"},{"Name":"Valeera","Role":"Melee Assassin"},{"Name":"DemonHunter","Role":"Ranged Assassin"},{"Name":"Varian","Role":"Bruiser"},{"Name":"Whitemane","Role":"Healer"},{"Name":"Necromancer","Role":"Bruiser"},{"Name":"Yrel","Role":"Bruiser"},{"Name":"Zagara","Role":"Ranged Assassin"},{"Name":"Zarya","Role":"Support"},{"Name":"Zeratul","Role":"Melee Assassin"},{"Name":"Zuljin","Role":"Ranged Assassin"}]
+[
+  {
+    "Name": "Abathur",
+    "Role": "Support"
+  },
+  {
+    "Name": "Alarak",
+    "Role": "Melee Assassin"
+  },
+  {
+    "Name": "Alexstrasza",
+    "Role": "Healer"
+  },
+  {
+    "Name": "Ana",
+    "Role": "Healer"
+  },
+  {
+    "Name": "Anduin",
+    "Role": "Healer"
+  },
+  {
+    "Name": "Anubarak",
+    "Role": "Tank"
+  },
+  {
+    "Name": "Artanis",
+    "Role": "Bruiser"
+  },
+  {
+    "Name": "Arthas",
+    "Role": "Tank"
+  },
+  {
+    "Name": "Auriel",
+    "Role": "Healer"
+  },
+  {
+    "Name": "Azmodan",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Firebat",
+    "Role": "Tank"
+  },
+  {
+    "Name": "FaerieDragon",
+    "Role": "Healer"
+  },
+  {
+    "Name": "Amazon",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Chen",
+    "Role": "Bruiser"
+  },
+  {
+    "Name": "Cho",
+    "Role": "Tank"
+  },
+  {
+    "Name": "Chromie",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Deathwing",
+    "Role": "Bruiser"
+  },
+  {
+    "Name": "Deckard",
+    "Role": "Healer"
+  },
+  {
+    "Name": "Dehaka",
+    "Role": "Bruiser"
+  },
+  {
+    "Name": "Diablo",
+    "Role": "Tank"
+  },
+  {
+    "Name": "DVa",
+    "Role": "Bruiser"
+  },
+  {
+    "Name": "L90ETC",
+    "Role": "Tank"
+  },
+  {
+    "Name": "Falstad",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Fenix",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Gall",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Garrosh",
+    "Role": "Tank"
+  },
+  {
+    "Name": "Tinker",
+    "Role": "Melee Assassin"
+  },
+  {
+    "Name": "Genji",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Greymane",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Guldan",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Hanzo",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Illidan",
+    "Role": "Melee Assassin"
+  },
+  {
+    "Name": "Imperius",
+    "Role": "Bruiser"
+  },
+  {
+    "Name": "Jaina",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Crusader",
+    "Role": "Tank"
+  },
+  {
+    "Name": "Junkrat",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Kaelthas",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "KelThuzad",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Kerrigan",
+    "Role": "Melee Assassin"
+  },
+  {
+    "Name": "Monk",
+    "Role": "Healer"
+  },
+  {
+    "Name": "Leoric",
+    "Role": "Bruiser"
+  },
+  {
+    "Name": "LiLi",
+    "Role": "Healer"
+  },
+  {
+    "Name": "Wizard",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "LostVikings",
+    "Role": "Support"
+  },
+  {
+    "Name": "Medic",
+    "Role": "Healer"
+  },
+  {
+    "Name": "Lucio",
+    "Role": "Healer"
+  },
+  {
+    "Name": "Dryad",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Maiev",
+    "Role": "Melee Assassin"
+  },
+  {
+    "Name": "Malfurion",
+    "Role": "Healer"
+  },
+  {
+    "Name": "MalGanis",
+    "Role": "Tank"
+  },
+  {
+    "Name": "Malthael",
+    "Role": "Bruiser"
+  },
+  {
+    "Name": "Medivh",
+    "Role": "Support"
+  },
+  {
+    "Name": "Mephisto",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Muradin",
+    "Role": "Tank"
+  },
+  {
+    "Name": "Murky",
+    "Role": "Melee Assassin"
+  },
+  {
+    "Name": "WitchDoctor",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Nova",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Orphea",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Probius",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "NexusHunter",
+    "Role": "Melee Assassin"
+  },
+  {
+    "Name": "Ragnaros",
+    "Role": "Bruiser"
+  },
+  {
+    "Name": "Raynor",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Rehgar",
+    "Role": "Healer"
+  },
+  {
+    "Name": "Rexxar",
+    "Role": "Bruiser"
+  },
+  {
+    "Name": "Samuro",
+    "Role": "Melee Assassin"
+  },
+  {
+    "Name": "SgtHammer",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Barbarian",
+    "Role": "Bruiser"
+  },
+  {
+    "Name": "Stitches",
+    "Role": "Tank"
+  },
+  {
+    "Name": "Stukov",
+    "Role": "Healer"
+  },
+  {
+    "Name": "Sylvanas",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Tassadar",
+    "Role": "Support"
+  },
+  {
+    "Name": "Butcher",
+    "Role": "Melee Assassin"
+  },
+  {
+    "Name": "Thrall",
+    "Role": "Bruiser"
+  },
+  {
+    "Name": "Tracer",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Tychus",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Tyrael",
+    "Role": "Tank"
+  },
+  {
+    "Name": "Tyrande",
+    "Role": "Healer"
+  },
+  {
+    "Name": "Uther",
+    "Role": "Healer"
+  },
+  {
+    "Name": "Valeera",
+    "Role": "Melee Assassin"
+  },
+  {
+    "Name": "DemonHunter",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Varian",
+    "Role": "Bruiser"
+  },
+  {
+    "Name": "Whitemane",
+    "Role": "Healer"
+  },
+  {
+    "Name": "Necromancer",
+    "Role": "Bruiser"
+  },
+  {
+    "Name": "Yrel",
+    "Role": "Bruiser"
+  },
+  {
+    "Name": "Zagara",
+    "Role": "Ranged Assassin"
+  },
+  {
+    "Name": "Zarya",
+    "Role": "Support"
+  },
+  {
+    "Name": "Zeratul",
+    "Role": "Melee Assassin"
+  },
+  {
+    "Name": "Zuljin",
+    "Role": "Ranged Assassin"
+  }
+]
