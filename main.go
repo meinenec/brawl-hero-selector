@@ -1,61 +1,62 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
-	"io/ioutil"
-	"math/rand"
-	"time"
+	"github.com/bwmarrin/discordgo"
+	"os"
+	"syscall"
+	"os/signal"
+	"meinenec/brawl-hero-selector/heroes"
+	"strings"
 )
 
-// Hero is a struct definition of a hero
-type Hero struct {
-	Name string
-	Role string
-}
-
-// Heroes is a slice of Hero
-type Heroes []Hero
-
 func main() {
-	fmt.Printf("%+v\n", Assign(3))
-}
-
-// Assign returns a slice of n unique heroes to play
-func Assign(n int) Heroes {
-	heroes := getHeroes()
-	rand.Seed(time.Now().Unix())
-	h := Heroes{}
-
-	for len(h) < n {
-		hero := heroes[rand.Intn(len(heroes))]
-		if !h.contains(hero) {
-			h = append(h, hero)
-		}
+	token, exists := os.LookupEnv("BOT_TOKEN")
+    if !exists {
+        panic(fmt.Errorf("BOT_TOKEN not set"))
 	}
-
-	return h
-}
-
-func (h *Heroes) contains(hero Hero) bool {
-	for _, a := range *h {
-		if a == hero {
-			return true
-		}
-	}
-	return false
-}
-
-func getHeroes() Heroes {
-	var h Heroes
-	data, err := ioutil.ReadFile("heroes.json")
+	
+	// Create a new discord session with heroes-bot
+	dg, err := discordgo.New("Bot "+ token) 
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
 
-	err = json.Unmarshal(data, &h)
+	// Register the brawl func as a callback for "brawl" events
+	dg.AddHandler(brawl)
+
+	err = dg.Open()
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
-	return h
+
+	fmt.Println("Bot is running!")
+	sc := make(chan os.Signal, 1)
+	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, os.Interrupt, os.Kill)
+	<-sc
+
+	dg.Close()
+}
+
+func brawl(s *discordgo.Session, m*discordgo.MessageCreate) {
+
+	// Ignore all messages created by the bot itself
+	if m.Author.ID == s.State.User.ID {
+		return
+	}
+
+	// Make m.Content lowercase
+	message := strings.ToLower(m.Content)
+
+	// If the message is "brawl" reply with heroes
+	if message == "brawl" {
+		options := "Pick your Hero!"
+		for _, h := range heroes.Assign(3) {
+			options = fmt.Sprintf("%s %s %s", options, h.Name, h.Role)
+		}
+		s.ChannelMessageSend(m.ChannelID, options)
+	}
+
 }
