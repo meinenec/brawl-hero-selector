@@ -2,22 +2,23 @@ package main
 
 import (
 	"fmt"
-	"github.com/bwmarrin/discordgo"
-	"os"
-	"syscall"
-	"os/signal"
 	"meinenec/brawl-hero-selector/heroes"
+	"os"
+	"os/signal"
 	"strings"
+	"syscall"
+
+	"github.com/bwmarrin/discordgo"
 )
 
 func main() {
 	token, exists := os.LookupEnv("BOT_TOKEN")
-    if !exists {
-        panic(fmt.Errorf("BOT_TOKEN not set"))
+	if !exists {
+		panic(fmt.Errorf("BOT_TOKEN not set"))
 	}
-	
+
 	// Create a new discord session with heroes-bot
-	dg, err := discordgo.New("Bot "+ token) 
+	dg, err := discordgo.New("Bot " + token)
 	if err != nil {
 		fmt.Println(err.Error())
 		return
@@ -40,7 +41,7 @@ func main() {
 	dg.Close()
 }
 
-func brawl(s *discordgo.Session, m*discordgo.MessageCreate) {
+func brawl(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 	// Ignore all messages created by the bot itself
 	if m.Author.ID == s.State.User.ID {
@@ -52,11 +53,25 @@ func brawl(s *discordgo.Session, m*discordgo.MessageCreate) {
 
 	// If the message is "brawl" reply with heroes
 	if message == "brawl" {
-		options := "Pick your Hero!"
+		fields := []*discordgo.MessageEmbedField{}
+
 		for _, h := range heroes.Assign(3) {
-			options = fmt.Sprintf("%s %s %s", options, h.Name, h.Role)
+			fields = append(fields, &discordgo.MessageEmbedField{
+				Name:   h.Role,
+				Value:  h.Name,
+				Inline: true,
+			})
 		}
-		s.ChannelMessageSend(m.ChannelID, options)
+
+		embed := &discordgo.MessageEmbed{
+			Title:       "Brawl Hero Selector",
+			Author:      &discordgo.MessageEmbedAuthor{},
+			Color:       0x36A8DE,
+			Description: "Pick your Hero!",
+			Fields:      fields,
+		}
+
+		s.ChannelMessageSendEmbed(m.ChannelID, embed)
 	}
 
 }
