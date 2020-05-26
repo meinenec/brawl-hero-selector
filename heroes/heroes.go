@@ -16,15 +16,17 @@ type Hero struct {
 // Heroes is a slice of Hero
 type Heroes []Hero
 
+var brawlBlacklist = []string{"Cho", "Gall", "Sgt. Hammer", "Abathur"}
+
 // Assign returns a slice of n unique heroes to play
-func Assign(n int) Heroes {
+func Assign(n int, hPool string) Heroes {
 	heroes := getHeroes()
 	rand.Seed(time.Now().UnixNano())
 	h := Heroes{}
 
 	for len(h) < n {
 		hero := heroes[rand.Intn(len(heroes))]
-		if !h.contains(hero) {
+		if h.accepts(hero, hPool) {
 			h = append(h, hero)
 		}
 	}
@@ -32,13 +34,22 @@ func Assign(n int) Heroes {
 	return h
 }
 
-func (h *Heroes) contains(hero Hero) bool {
+func (h *Heroes) accepts(hero Hero, hPool string) bool {
 	for _, a := range *h {
 		if a == hero {
-			return true
+			return false
 		}
 	}
-	return false
+
+	if hPool == "brawl" {
+		for _, a := range brawlBlacklist {
+			if a == hero.Name {
+				return false
+			}
+		}
+	}
+
+	return true
 }
 
 func getHeroes() Heroes {

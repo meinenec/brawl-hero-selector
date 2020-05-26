@@ -40,15 +40,15 @@
     "Role": "Ranged Assassin"
   },
   {
-    "Name": "Firebat",
+    "Name": "Blaze",
     "Role": "Tank"
   },
   {
-    "Name": "FaerieDragon",
+    "Name": "Brightwing",
     "Role": "Healer"
   },
   {
-    "Name": "Amazon",
+    "Name": "Cassia",
     "Role": "Ranged Assassin"
   },
   {
@@ -84,7 +84,7 @@
     "Role": "Bruiser"
   },
   {
-    "Name": "L90ETC",
+    "Name": "ETC",
     "Role": "Tank"
   },
   {
@@ -104,7 +104,7 @@
     "Role": "Tank"
   },
   {
-    "Name": "Tinker",
+    "Name": "Gazlowe",
     "Role": "Melee Assassin"
   },
   {
@@ -136,7 +136,7 @@
     "Role": "Ranged Assassin"
   },
   {
-    "Name": "Crusader",
+    "Name": "Johanna",
     "Role": "Tank"
   },
   {
@@ -156,7 +156,7 @@
     "Role": "Melee Assassin"
   },
   {
-    "Name": "Monk",
+    "Name": "Kharazim",
     "Role": "Healer"
   },
   {
@@ -164,19 +164,19 @@
     "Role": "Bruiser"
   },
   {
-    "Name": "LiLi",
+    "Name": "Li Li",
     "Role": "Healer"
   },
   {
-    "Name": "Wizard",
+    "Name": "Li-Ming",
     "Role": "Ranged Assassin"
   },
   {
-    "Name": "LostVikings",
+    "Name": "The Lost Vikings",
     "Role": "Support"
   },
   {
-    "Name": "Medic",
+    "Name": "Lt. Morales",
     "Role": "Healer"
   },
   {
@@ -184,7 +184,7 @@
     "Role": "Healer"
   },
   {
-    "Name": "Dryad",
+    "Name": "Lunara",
     "Role": "Ranged Assassin"
   },
   {
@@ -196,7 +196,7 @@
     "Role": "Healer"
   },
   {
-    "Name": "MalGanis",
+    "Name": "Mal'Ganis",
     "Role": "Tank"
   },
   {
@@ -220,7 +220,7 @@
     "Role": "Melee Assassin"
   },
   {
-    "Name": "WitchDoctor",
+    "Name": "Nazeebo",
     "Role": "Ranged Assassin"
   },
   {
@@ -236,7 +236,7 @@
     "Role": "Ranged Assassin"
   },
   {
-    "Name": "NexusHunter",
+    "Name": "Qhira",
     "Role": "Melee Assassin"
   },
   {
@@ -260,11 +260,11 @@
     "Role": "Melee Assassin"
   },
   {
-    "Name": "SgtHammer",
+    "Name": "Sgt. Hammer",
     "Role": "Ranged Assassin"
   },
   {
-    "Name": "Barbarian",
+    "Name": "Sonya",
     "Role": "Bruiser"
   },
   {
@@ -281,7 +281,7 @@
   },
   {
     "Name": "Tassadar",
-    "Role": "Support"
+    "Role": "Ranged Assassin"
   },
   {
     "Name": "Butcher",
@@ -316,7 +316,7 @@
     "Role": "Melee Assassin"
   },
   {
-    "Name": "DemonHunter",
+    "Name": "Valla",
     "Role": "Ranged Assassin"
   },
   {
@@ -328,7 +328,7 @@
     "Role": "Healer"
   },
   {
-    "Name": "Necromancer",
+    "Name": "Xul",
     "Role": "Bruiser"
   },
   {

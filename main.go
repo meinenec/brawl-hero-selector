@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"meinenec/brawl-hero-selector/heroes"
+	"meinenec/brawl-hero-selector/cmd"
 	"os"
 	"os/signal"
 	"strings"
@@ -25,7 +25,7 @@ func main() {
 	}
 
 	// Register the brawl func as a callback for "brawl" events
-	dg.AddHandler(brawl)
+	dg.AddHandler(handler)
 
 	err = dg.Open()
 	if err != nil {
@@ -41,37 +41,19 @@ func main() {
 	dg.Close()
 }
 
-func brawl(s *discordgo.Session, m *discordgo.MessageCreate) {
-
+func handler(s *discordgo.Session, m *discordgo.MessageCreate) {
 	// Ignore all messages created by the bot itself
 	if m.Author.ID == s.State.User.ID {
 		return
 	}
 
 	// Make m.Content lowercase
-	message := strings.ToLower(m.Content)
+	message := strings.Split(strings.ToLower(m.Content), " ")
 
 	// If the message is "brawl" reply with heroes
-	if message == "brawl" {
-		fields := []*discordgo.MessageEmbedField{}
-
-		for _, h := range heroes.Assign(3) {
-			fields = append(fields, &discordgo.MessageEmbedField{
-				Name:   h.Role,
-				Value:  h.Name,
-				Inline: true,
-			})
-		}
-
-		embed := &discordgo.MessageEmbed{
-			Title:       "Brawl Hero Selector",
-			Author:      &discordgo.MessageEmbedAuthor{},
-			Color:       0x36A8DE,
-			Description: "Pick your Hero!",
-			Fields:      fields,
-		}
-
-		s.ChannelMessageSendEmbed(m.ChannelID, embed)
+	if message[0] == "!brawl" {
+		body := cmd.HandleBrawl(message)
+		s.ChannelMessageSendEmbed(m.ChannelID, body)
 	}
 
 }
